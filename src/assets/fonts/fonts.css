@@ -1,0 +1,47 @@
+@font-face{
+
+    font-family: 'Montserrat';
+    
+    src: url('../fonts/Montserrat-Regular.ttf') format('truetype');
+    
+    font-weight: normal;
+    
+    font-style: normal;
+    
+}
+
+@font-face{
+
+    font-family: 'Montserrat-Bold';
+
+    src: url('../fonts/Montserrat-BoldItalic.ttf') format('truetype');
+    
+    font-weight: bold;
+    
+    font-style: italic;
+    
+}
+
+@font-face{
+
+    font-family: 'Witcher';
+
+    src: url('../fonts/Thewitcher-jnOj.ttf') format('truetype');
+    
+    font-weight: bold;
+    
+    font-style: italic;
+    
+}
+@font-face{
+
+    font-family: 'Gwent';
+
+    src: url('../fonts/gwent_extrabold.ttf') format('truetype');
+    
+    font-weight: bold;
+    
+    font-style: italic;
+    
+}
+

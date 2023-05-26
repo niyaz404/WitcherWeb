@@ -1,0 +1,173 @@
+:root{
+    --card-shift:5vw;
+    --card-size-index:2vw;
+    --x01:calc(var(--card-size-index) * -6);
+    --y01:calc(var(--card-size-index) * 3.5);
+    --x02:calc(var(--card-size-index) * -4);
+    --y02:calc(var(--card-size-index) * 1.5);
+    --x03:calc(var(--card-size-index) * -1.5);
+    --y03:calc(var(--card-size-index) * 0);
+    --x04:calc(var(--card-size-index) * 1.5);
+    --y04:calc(var(--card-size-index) * 0);
+    --x05:calc(var(--card-size-index) * 4);
+    --y05:calc(var(--card-size-index) * 1.5);
+    --x06:calc(var(--card-size-index) * 6);
+    --y06:calc(var(--card-size-index) * 3.5);
+    --angle1:305deg;
+    --angle2:327deg;
+    --angle3:349deg;
+    --angle4:11deg;
+    --angle5:33deg;
+    --angle6:55deg;
+}
+
+.cards-bg{  
+    display: flex;    
+    justify-content: center;
+    align-items: flex-end;  
+    width: 100vw;
+    position: relative;
+}
+
+.cards-bg>img{
+    width: 100vw;
+}
+
+.deck{
+    display: flex;
+    justify-content: center;
+    height: 30vw;
+    position: absolute;
+}
+
+.deck>.card{
+    position: absolute;
+    transition: transform 1s;
+    box-shadow: 20px 10px 13px 0px black, 20px 8px 13px 0px black;
+    width: calc(var(--card-size-index) * 6);
+    height: calc(var(--card-size-index) * 9);
+}
+
+#card1{
+    transform: translate(var(--x01), var(--y01)) rotate(var(--angle1))
+}
+#card2{
+    transform: translate(var(--x02), var(--y02)) rotate(var(--angle2))
+}
+#card3{
+    transform: translate(var(--x03), var(--y03)) rotate(var(--angle3))
+}
+#card4{
+    transform: translate(var(--x04), var(--y04)) rotate(var(--angle4))
+}
+#card5{
+    transform: translate(var(--x05), var(--y05)) rotate(var(--angle5))
+}
+#card6{
+    transform: translate(var(--x06), var(--y06)) rotate(var(--angle6))
+}
+#card1:hover{
+    transform: translate(calc(var(--x01) + sin(var(--angle1)) * var(--card-shift)), calc(var(--y01) - cos(var(--angle1)) * var(--card-shift))) rotate(var(--angle1));
+}
+#card2:hover{
+    transform: translate(calc(var(--x02) + sin(var(--angle2)) * var(--card-shift)), calc(var(--y02) - cos(var(--angle2)) * var(--card-shift))) rotate(var(--angle2));
+}
+#card3:hover{
+    transform: translate(calc(var(--x03) + sin(var(--angle3)) * var(--card-shift)), calc(var(--y03) - cos(var(--angle3)) * var(--card-shift))) rotate(var(--angle3));
+}
+#card4:hover{
+    transform: translate(calc(var(--x04) + sin(var(--angle4)) * var(--card-shift)), calc(var(--y04) - cos(var(--angle4)) * var(--card-shift))) rotate(var(--angle4))
+}
+#card5:hover{
+    transform: translate(calc(var(--x05) + sin(var(--angle5)) * var(--card-shift)), calc(var(--y05) - cos(var(--angle5)) * var(--card-shift))) rotate(var(--angle5))
+}
+#card6:hover{
+    transform: translate(calc(var(--x06) + sin(var(--angle6)) * var(--card-shift)), calc(var(--y06) - cos(var(--angle6)) * var(--card-shift))) rotate(var(--angle6));
+}
+
+
+.gwent-page2{
+    width: 100%;
+}
+.article{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.article-text{
+    display: flex;
+    text-align: justify;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10%;
+    width: 30%;
+}
+.article-text>h1{
+    font-family: 'Gwent';
+    color: #126749;
+    font-size: 4vw;
+    text-shadow: -2px 2px 0px #d4a23a;;
+}
+.article-text>h2{
+    font-family: 'Gwent';
+    margin:auto;
+    height: 80%;
+    font-size: 2vw;
+    text-shadow: 0 0 2px black;
+}
+.article-imgs{
+    /* padding: calc(var(--index) * 3); */
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2vw;
+    align-content: center;
+}
+.article-img{
+  box-sizing: border-box;
+    border-width: 1px;
+    border-style: solid;
+    border-color: white;
+    width: 22vw;
+    height: 13vw;
+    position: relative;
+    border-radius: 2vh;    
+    z-index: 1;
+    box-shadow: -1px 14px 16px 4px black;
+    transform:scale(1);;
+    transition: transform .5s cubic-bezier(0.96, 0.02, 0.6, 0.2), z-index .5s cubic-bezier(0.96, 0.02, 0.6, 0.2);;
+}
+
+.article-img-left{
+    bottom:3vw;
+}
+
+.article-img:hover{
+  z-index: 2;
+}
+
+.article-img-right:hover{    
+}
+.article-img-left:hover{
+}
+
+#article-img1:hover{
+  transition: transform .7s cubic-bezier(0.7, 0.13, 0.33, 0.73);
+    transform: translate3d(12vw,10vw, 0) scale(1.5) rotate3d(1,1,-1,360deg);
+}
+#article-img2:hover{
+  transition: transform .7s cubic-bezier(0.7, 0.13, 0.33, 0.73);
+    transform: translate3d(-12vw,7vw, 0) scale(1.5) rotate3d(1,1,-1,360deg);
+}
+#article-img3:hover{
+  transition: transform .7s cubic-bezier(0.7, 0.13, 0.33, 0.73);
+    transform: translate3d(12vw,-5vw, 0) scale(1.5) rotate3d(1,1,-1,360deg);
+}
+#article-img4:hover{
+  transition: transform .7s cubic-bezier(0.7, 0.13, 0.33, 0.73);
+    transform: translate3d(-12vw,-8vw, 0) scale(1.5) rotate3d(1,1,-1,360deg);
+}

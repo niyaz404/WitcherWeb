@@ -1,0 +1,68 @@
+.second-page{
+    position: relative;
+}
+
+.delimiter2{
+    width: 100vw;
+    height: 2px;
+    box-shadow: 0px -13px 20px 4px #d5ece4, 3px 5px 20px 11px #8cc0ea91;
+    background: linear-gradient(#d5ece4, #8cc0ea91);
+    z-index: 3;
+    position: relative;
+}
+
+.layers2 {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    will-change: width, height;
+}
+
+.layer2 {    
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    will-change: transform;
+    z-index: 2;
+    transition: var(--transition), width 1s, height 1s;
+}
+
+.layer-back2{
+    z-index: -1;
+}
+
+.layer-griph{
+    transform: translate3d(calc(var(--scrollTop) / -5.5 + 20vh), 0, 0);
+}
+
+.layer-text2{
+    width: 30vw;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    transform: translate3d(calc(var(--scrollTop) / -5.5 + 60vh), 0, 0);
+}
+
+.layers2:hover> .layer-text2>{
+    margin-left: 0;
+}
+
+.layer-text2>img{
+    width: 23vw;
+    height: 15vh;
+}
+
+.layer-text2>h3{
+    font-family: ff-good-web-pro-condensed,sans-serif;
+    text-align: justify;
+}

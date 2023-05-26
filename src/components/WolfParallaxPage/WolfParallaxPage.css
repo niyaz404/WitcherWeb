@@ -1,0 +1,40 @@
+.after-sticky-page{
+    background-color: black;
+    z-index: -3;
+}
+
+.layers4{
+    height: 120vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.layer4{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    will-change: transform;
+    z-index: -3;
+    transition: var(--transition);
+}
+
+.layer-back4{
+    transform: translate3d(0, calc((var(--scrollTop) - var(--wolfPageOffset)) / 5.5), 0);
+    scale: .7;
+}
+.layer-front4{
+    transform: translate3d(0, calc((var(--scrollTop) - var(--wolfPageOffset)) / 4.8), 0);
+    scale: 1.2;
+}
+
+.delimiter3{
+    box-shadow: 0px -13px 20px 4px #d5ece4, 3px 5px 20px 11px #02924e;
+    background: linear-gradient(#d5ece4, #02924e);    
+}

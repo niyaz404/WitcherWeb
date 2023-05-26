@@ -1,0 +1,53 @@
+.main-page{
+    position: relative;
+}
+.layers {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.layer {    
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    will-change: transform;
+    z-index: 2;
+    transition: var(--transition);
+}
+
+.layer-back{
+    z-index: -1;
+    transform: translate3d(0, calc(var(--scrollTop) / 1.6), 0);
+}
+
+.layer-middle{
+    height: calc(var(--index) * 5);
+    width: calc(var(--index) * 10);
+    top: 20vh;
+    right: 15vw;
+    transform: translate3d(0, calc(var(--scrollTop) / 2.5), 0);
+}
+
+.layer-front{
+    transform: translate3d(0, calc(var(--scrollTop) / 3.5), 0);
+}
+
+.layer-sparks{
+    height: 50vh;
+    bottom: 0;
+    transform: translate3d(0, calc(var(--scrollTop) / 2), 0);
+}
+
+/* .layers{
+    width: 100%;
+    height: 100%;
+} */
+

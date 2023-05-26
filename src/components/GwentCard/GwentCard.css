@@ -1,0 +1,35 @@
+.card-container>.card{
+    position: absolute;
+    transition: transform 2s, left 2s, box-shadow 2s;
+    will-change: left,transform;
+}
+.card.left{
+    left:5vw;
+    transform: translate3d(calc(var(--cardIndex) * 3px),calc(var(--cardIndex) * 3px),0) rotate3d(0, 1, 0, 180deg);
+}
+.card.left>.G1-card{
+    transition: opacity 2s cubic-bezier(0.52, -0.5, 0, 1.7), z-index 2s;
+    z-index: -1;
+    opacity: 0;
+}
+.card.right{
+    left:75vw ;
+    transform: translate3d(calc(var(--cardIndex) * -3px),calc(var(--cardIndex) * -3px),0);
+    z-index: var(--cardIndex);
+}
+.card.selected{
+    left: calc(50% - 6vw);
+    transform:  rotate3d(2, -2, 0, 22deg);
+    z-index: 100;
+    box-shadow: 9px 16px 20px 3px #000000;
+}
+.card.selected:hover{
+    transform:  rotate3d(-2, 2, 0, 32deg) scale(1.2);
+    box-shadow: 9px 16px 20px 3px #000000;
+}
+.card.selected>.G1-card{
+    transition: opacity 2s cubic-bezier(0.54, -0.29, 0, 1.63), z-index 2s;
+    z-index: 1;
+    opacity: 1;
+}
+

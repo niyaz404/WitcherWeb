@@ -1,0 +1,43 @@
+
+.layers3 {
+    height: 130vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.layer3 {    
+    height: 120vh;
+    width: 100vw;
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    will-change: transform;
+    z-index: 2;
+    transition: var(--transition), width 1s, height 1s;
+}
+
+.layer-back3{
+    height: 130vh;
+    z-index: -1;
+    background-color: black;
+}
+
+.layer-gera{
+    z-index: 2;
+    transform: translate3d(0, calc((var(--scrollTop) - var(--gwentPageOffset)) / 2.6), 0);
+}
+
+.layer-ciri{
+    transform: translate3d(0, calc((var(--scrollTop) - var(--gwentPageOffset)) / 2.6), 0);
+}
+
+.layer-logo{
+    margin-top: 30vh;
+    height: 100vh;
+    z-index: -1;
+}

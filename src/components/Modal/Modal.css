@@ -1,0 +1,659 @@
+.modal{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200vh;
+    width: 200vw;
+    background-color: rgba(0,0,0,0.4);
+    top:-50%;
+    left:-50%;  
+    z-index: 100;
+    transform: scale(0.5);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 1s cubic-bezier(0.64, -0.28, 0.17, 1.71), transform 1s cubic-bezier(0.64, -0.28, 0.17, 1.71);
+}
+
+.modal.active{
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: all;
+}
+
+.modal-content{
+    padding:20px;
+    border-radius: 15px;
+    background-color: #a18c6c;
+    box-shadow: 0px 0px 7px 12px #a18c6c, 0px 0px 20px 14px black;
+    height: 50vh;
+    width: 50vw;
+    min-height:200px;
+    min-width: 400px;
+    display: flex;
+    transition: opacity 1s cubic-bezier(0.64, -0.28, 0.17, 1.71), transform 1s cubic-bezier(0.64, -0.28, 0.17, 1.71);
+}
+
+.modal-content.active{
+    transform: scale(1) rotate3d(1, 1, 1, 360deg);
+}
+
+.video-wrap{
+    margin-top:1.5vw;
+    position: relative;
+    height: 40vh;
+    width: 28vh;
+    top:0;
+    left:0;
+}
+.card-frame{
+    position: absolute;
+    background-image: url(https://gwent.one/img/assets/medium/other/border_gold.png);
+    height: 40vh;
+    width: 28vh;
+    top:0;
+    left:0;
+    background-size: cover;
+    background-position: center;
+}
+
+video {
+    position: absolute;
+    height: 40vh;
+    top:0;
+    left:0;
+}
+
+.card_provision{
+    position: absolute;
+    height: 40vh;
+    width: 28vh;
+    top:0;
+    left:0;
+    background-size: cover;
+    background-position: center;
+}
+.card-prov{
+    position: absolute;
+    height: 40vh;
+    width: 28vh;
+    top:0;
+    left:0;
+    background-size: cover;
+    background-position: center;
+}
+.card-power-back{
+    position: absolute;
+    height: 40vh;
+    width: 28vh;
+    top:0;
+    left:0;
+    background-size: cover;
+    background-position: center;
+}
+.card-power{
+    position: absolute;
+    height: 40vh;
+    width: 28vh;
+    top:0;
+    left:0;
+    background-size: cover;
+    background-position: center;
+}
+
+.video-wrap[data-power="0"] .card-power {
+    background-image: url(https://gwent.one/img/assets/medium/number/power_00.png)
+}
+.video-wrap[data-power="1"] .card-power {
+    background-image: url(https://gwent.one/img/assets/medium/number/power_01.png)
+}
+
+.video-wrap[data-provision="1"] .card_asset-ability-provision {
+    background-image: url(https://gwent.one/img/assets/medium/number/ability_01.png)
+}
+
+.video-wrap[data-armor="2"] .card_asset-armor {
+    background-image: url(https://gwent.one/img/assets/medium/number/armor_02.png)
+}
+
+.video-wrap[data-provision="2"] .card_asset-provision {
+    background-image: url(https://gwent.one/img/assets/medium/number/provision_02.png)
+}
+
+.video-wrap[data-power="2"] .card-power {
+    background-image: url(https://gwent.one/img/assets/medium/number/power_02.png)
+}
+
+.video-wrap[data-provision="2"] .card_asset-ability-provision {
+    background-image: url(https://gwent.one/img/assets/medium/number/ability_02.png)
+}
+
+.video-wrap[data-armor="3"] .card_asset-armor {
+    background-image: url(https://gwent.one/img/assets/medium/number/armor_03.png)
+}
+
+.video-wrap[data-provision="3"] .card_asset-provision {
+    background-image: url(https://gwent.one/img/assets/medium/number/provision_03.png)
+}
+
+.video-wrap[data-power="3"] .card-power {
+    background-image: url(https://gwent.one/img/assets/medium/number/power_03.png)
+}
+
+.video-wrap[data-provision="3"] .card_asset-ability-provision {
+    background-image: url(https://gwent.one/img/assets/medium/number/ability_03.png)
+}
+
+.video-wrap[data-armor="4"] .card_asset-armor {
+    background-image: url(https://gwent.one/img/assets/medium/number/armor_04.png)
+}
+
+.video-wrap[data-provision="4"] .card_asset-provision {
+    background-image: url(https://gwent.one/img/assets/medium/number/provision_04.png)
+}
+
+.video-wrap[data-power="4"] .card-power {
+    background-image: url(https://gwent.one/img/assets/medium/number/power_04.png)
+}
+
+.video-wrap[data-provision="4"] .card_asset-ability-provision {
+    background-image: url(https://gwent.one/img/assets/medium/number/ability_04.png)
+}
+
+.video-wrap[data-armor="5"] .card_asset-armor {
+    background-image: url(https://gwent.one/img/assets/medium/number/armor_05.png)
+}
+
+.video-wrap[data-provision="5"] .card_asset-provision {
+    background-image: url(https://gwent.one/img/assets/medium/number/provision_05.png)
+}
+
+.video-wrap[data-power="5"] .card-power {
+    background-image: url(https://gwent.one/img/assets/medium/number/power_05.png)
+}
+
+.video-wrap[data-provision="5"] .card_asset-ability-provision {
+    background-image: url(https://gwent.one/img/assets/medium/number/ability_05.png)
+}
+
+.video-wrap[data-armor="6"] .card_asset-armor {
+    background-image: url(https://gwent.one/img/assets/medium/number/armor_06.png)
+}
+
+.video-wrap[data-provision="6"] .card_asset-provision {
+    background-image: url(https://gwent.one/img/assets/medium/number/provision_06.png)
+}
+
+.video-wrap[data-power="6"] .card-power {
+    background-image: url(https://gwent.one/img/assets/medium/number/power_06.png)
+}
+.video-wrap[data-power="7"] .card-power {
+    background-image: url(https://gwent.one/img/assets/medium/number/power_07.png)
+}
+.video-wrap[data-power="8"] .card-power {
+    background-image: url(https://gwent.one/img/assets/medium/number/power_08.png)
+}
+.video-wrap[data-power="9"] .card-power {
+    background-image: url(https://gwent.one/img/assets/medium/number/power_09.png)
+}
+.video-wrap[data-power="10"] .card-power {
+    background-image: url(https://gwent.one/img/assets/medium/number/power_10.png)
+}
+.video-wrap[data-power="11"] .card-power {
+    background-image: url(https://gwent.one/img/assets/medium/number/power_11.png)
+}
+.video-wrap[data-power="12"] .card-power {
+    background-image: url(https://gwent.one/img/assets/medium/number/power_12.png)
+}
+.video-wrap[data-power="13"] .card-power {
+    background-image: url(https://gwent.one/img/assets/medium/number/power_13.png)
+}
+.video-wrap[data-power="14"] .card-power {
+    background-image: url(https://gwent.one/img/assets/medium/number/power_14.png)
+}
+.video-wrap[data-power="15"] .card-power {
+    background-image: url(https://gwent.one/img/assets/medium/number/power_15.png)
+}
+
+.video-wrap[data-provision="0"] .card-prov {
+    background-image: url(https://gwent.one/img/assets/medium/number/provision_00.png)
+}
+.video-wrap[data-provision="1"] .card-prov {
+    background-image: url(https://gwent.one/img/assets/medium/number/provision_01.png)
+}
+.video-wrap[data-provision="2"] .card-prov {
+    background-image: url(https://gwent.one/img/assets/medium/number/provision_02.png)
+}
+.video-wrap[data-provision="3"] .card-prov {
+    background-image: url(https://gwent.one/img/assets/medium/number/provision_03.png)
+}
+.video-wrap[data-provision="4"] .card-prov {
+    background-image: url(https://gwent.one/img/assets/medium/number/provision_04.png)
+}
+.video-wrap[data-provision="5"] .card-prov {
+    background-image: url(https://gwent.one/img/assets/medium/number/provision_05.png)
+}
+.video-wrap[data-provision="6"] .card-prov {
+    background-image: url(https://gwent.one/img/assets/medium/number/provision_06.png)
+}
+.video-wrap[data-provision="7"] .card-prov {
+    background-image: url(https://gwent.one/img/assets/medium/number/provision_07.png)
+}
+.video-wrap[data-provision="8"] .card-prov {
+    background-image: url(https://gwent.one/img/assets/medium/number/provision_08.png)
+}
+.video-wrap[data-provision="9"] .card-prov {
+    background-image: url(https://gwent.one/img/assets/medium/number/provision_09.png)
+}
+.video-wrap[data-provision="10"] .card-prov {
+    background-image: url(https://gwent.one/img/assets/medium/number/provision_10.png)
+}
+
+.video-wrap[data-faction=neutral] .card-power-back {
+    background-image: url(https://gwent.one/img/assets/medium/banner/default_neutral.png)
+}
+
+.video-wrap[data-faction=monster] .card-power-back {
+    background-image: url(https://gwent.one/img/assets/medium/banner/default_monster.png)
+}
+
+.video-wrap[data-faction=nilfgaard] .card-power-back {
+    background-image: url(https://gwent.one/img/assets/medium/banner/default_nilfgaard.png)
+}
+
+.video-wrap[data-faction=northern_realms] .card-power-back {
+    background-image: url(https://gwent.one/img/assets/medium/banner/default_northern-realms.png)
+}
+
+.video-wrap[data-faction=scoiatael] .card-power-back {
+    background-image: url(https://gwent.one/img/assets/medium/banner/default_scoiatael.png)
+}
+
+.video-wrap[data-faction=skellige] .card-power-back {
+    background-image: url(https://gwent.one/img/assets/medium/banner/default_skellige.png)
+}
+
+.video-wrap[data-faction=syndicate] .card-power-back {
+    background-image: url(https://gwent.one/img/assets/medium/banner/default_syndicate.png)
+}
+
+.video-wrap[data-faction=neutral] .card_provision {
+    background-image: url(https://gwent.one/img/assets/medium/banner/provision_neutral.png)
+}
+
+.video-wrapd_provision {
+    background-image: url(https://gwent.one/img/assets/medium/banner/provision_monster.png)
+}
+
+.video-wrap[data-faction=nilfgaard] .card_provision {
+    background-image: url(https://gwent.one/img/assets/medium/banner/provision_nilfgaard.png)
+}
+
+.video-wrap[data-faction=northern_realms] .card_provision {
+    background-image: url(https://gwent.one/img/assets/medium/banner/provision_northern-realms.png)
+}
+
+.video-wrap[data-faction=scoiatael] .card_provision {
+    background-image: url(https://gwent.one/img/assets/medium/banner/provision_scoiatael.png)
+}
+
+.video-wrap[data-faction=skellige] .card_provision {
+    background-image: url(https://gwent.one/img/assets/medium/banner/provision_skellige.png)
+}
+
+.video-wrap[data-faction=syndicate] .card_provision {
+    background-image: url(https://gwent.one/img/assets/medium/banner/provision_syndicate.png)
+}
+
+.video-wrap[data-faction=skellige] .card_provision {
+    background-image: url(https://gwent.one/img/assets/medium/banner/provision_skellige.png);
+}
+
+.modal-content> .G1-card{
+    height: 100%;
+    width: 60%;
+    font-family: 'Gwent'!important;
+}
+
+.modal-content .G1-art{
+    margin:1.5vw;
+    display: none;
+}
+
+.modal-content .G1-card>.G1-info{
+    width: 35vw;
+    margin:1.5vw;
+    text-align: start;
+    display: block;
+    background-color: #a18c6c;
+
+}
+
+.modal-content .G1-head{
+    padding: 10px;
+    border-radius: 0 2vw 0 0;
+    color: white;
+}
+
+.modal-content .G1-body{
+    padding: 10px;
+}
+
+.modal-content .G1-name{
+    font-size: 3vw;
+}
+.G1-card > .G1-info span.keyword {
+    color: #600101;
+    font-weight: 800;
+}
+
+.G1-name>a{
+    text-decoration: none;
+    color: white;
+}
+
+.G1-card[data-faction=neutral] .G1-head {
+    background-color: #302113;
+  }
+  
+  .G1-card[data-faction=monster] .G1-head {
+    background-color: #4e120a;
+  }
+  
+  .G1-card[data-faction=nilfgaard] .G1-head {
+    background-color: #222222;
+  }
+  
+  .G1-card[data-faction=northern_realms] .G1-head {
+    background-color: #113a68;
+  }
+  
+  .G1-card[data-faction=scoiatael] .G1-head {
+    background-color: #323a1e;
+  }
+  
+  .G1-card[data-faction=skellige] .G1-head {
+    background-color: #33155d;
+  }
+  
+  .G1-card[data-faction=syndicate] .G1-head {
+    background-color: #75390d;
+  }
+  
+  .G1-card[data-faction2=neutral] .G1-head {
+    background-image: linear-gradient(45grad, #75390d 50%, #302113 50%);
+  }
+  
+  .G1-card[data-faction2=monster] .G1-head {
+    background-image: linear-gradient(45grad, #75390d 50%, #4e120a 50%);
+  }
+  
+  .G1-card[data-faction2=nilfgaard] .G1-head {
+    background-image: linear-gradient(45grad, #75390d 50%, #222222 50%);
+  }
+  
+  .G1-card[data-faction2=northern_realms] .G1-head {
+    background-image: linear-gradient(45grad, #75390d 50%, #113a68 50%);
+  }
+  
+  .G1-card[data-faction2=scoiatael] .G1-head {
+    background-image: linear-gradient(45grad, #75390d 50%, #323a1e 50%);
+  }
+  
+  .G1-card[data-faction2=skellige] .G1-head {
+    background-image: linear-gradient(45grad, #75390d 50%, #33155d 50%);
+  }
+  
+  .G1-card[data-faction2=syndicate] .G1-head {
+    background-image: linear-gradient(45grad, #75390d 50%, #75390d 50%);
+  }
+/*
+.modal-content .keywords:before {
+    content: " ";
+    display: block;
+    background-color: #89765a;
+    width: 40%;
+    height: 6px;
+    margin: 20px auto;
+    border-radius: 8px;
+} */
+
+
+/* 
+.modal-content> .G1-card {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "G1-info" "G1-art";
+    grid-gap: 20px;
+  }
+  @media screen and (min-width: 900px) {
+    .modal-content .G1-card {
+      grid-template-columns: 1fr 249px;
+      grid-template-areas: "G1-info G1-art";
+    }
+  }
+  .modal-content> .G1-card > .G1-info {
+    grid-area: G1-info;
+    display: block;
+  }
+  .modal-content> .G1-card > .G1-info .G1-head {
+    padding: 1rem;
+    color: #fff;
+  }
+  .modal-content> .G1-card > .G1-info .G1-name {
+    font-size: 1.2rem;
+  }
+  .modal-content> .G1-card > .G1-info .G1-name > a {
+    color: #fff;
+  }
+  .modal-content> .G1-card > .G1-info .G1-category {
+    font-size: 0.8rem;
+  }
+  .modal-content> .G1-card > .G1-info .G1-body {
+    padding: 1rem;
+    color: #000;
+    background-color: #a18c6c;
+  }
+  .G1-card > .G1-info span.keyword {
+    color: #600101;
+    font-weight: 800;
+  }
+  .modal-content> .G1-card > .G1-info .G1-keywords:before {
+    content: " ";
+    display: block;
+    background-color: #89765a;
+    width: 40%;
+    height: 6px;
+    margin: 20px auto;
+    border-radius: 8px;
+  }
+  .modal-content> .G1-card > .G1-info .G1-flavor {
+    text-align: center;
+    font-style: italic;
+    margin: 0 5%;
+  }
+  .modal-content> .G1-card > .G1-info .G1-flavor:before {
+    content: " ";
+    display: block;
+    background-color: #8f7c5f;
+    width: 90%;
+    height: 4px;
+    margin: 20px auto;
+    border-radius: 8px;
+  }
+  .modal-content> .G1-card > .G1-info .G1-foot {
+    text-align: right;
+  }
+  .modal-content> .G1-card > .G1-info .G1-foot span:before {
+    content: "Gwent v";
+  }
+  .modal-content> .G1-card > .G1-art {
+    grid-area: G1-art;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "G1-cardart" "G1-artist";
+    grid-gap: 5px;
+    align-content: start;
+    justify-content: center;
+    justify-items: center;
+  }
+  .modal-content> .G1-card > .G1-art .G1-cardart {
+    grid-area: G1-cardart;
+    position: relative;
+  }
+  .modal-content> .G1-card > .G1-art .G1-cardart > img {
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 0px;
+  }
+  .modal-content> .G1-card > .G1-art .G1-cardart[data-res=low] {
+    width: 150px;
+    height: 215px;
+  }
+  .modal-content> .G1-card > .G1-art .G1-cardart[data-res=low] > img {
+    border-radius: 5px;
+  }
+  .modal-content> .G1-card > .G1-art .G1-cardart[data-res=low] .ability-icon {
+    width: 150px !important;
+    height: 150px !important;
+  }
+  .modal-content> .G1-card > .G1-art .G1-cardart[data-res=medium] {
+    width: 249px;
+    height: 357px;
+  }
+  .modal-content .G1-card > .G1-art .G1-cardart[data-res=medium] > img {
+    border-radius: 8px;
+  }
+  .modal-content .G1-card > .G1-art .G1-cardart[data-res=medium] .ability-icon {
+    width: 249px !important;
+    height: 249px !important;
+  }
+  .G1-card > .G1-art .G1-deckart {
+    grid-area: G1-cardart;
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .G1-card > .G1-art .G1-deckart > img {
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 0px;
+  }
+  .G1-card > .G1-art .G1-deckart[data-res=low] {
+    width: calc(525px * 0.5);
+    height: calc(70px * 0.5);
+  }
+  .G1-card > .G1-art .G1-deckart[data-res=low] > img {
+    border-radius: 5px;
+    width: calc(525px * 0.5);
+    height: calc(70px * 0.5);
+  }
+  .G1-card > .G1-art .G1-deckart[data-res=medium] {
+    width: 525px;
+    height: 70px;
+  }
+  .G1-card > .G1-art .G1-deckart[data-res=medium] > img {
+    border-radius: 8px;
+    width: 525px;
+    height: 70px;
+  }
+  .G1-card > .G1-art .G1-deckart.ability[data-res=low] {
+    width: calc(525px * 0.5) !important;
+    height: calc(116px * 0.5) !important;
+  }
+  .G1-card > .G1-art .G1-deckart.ability[data-res=low] > img {
+    border-radius: 5px;
+    width: calc(525px * 0.5) !important;
+    height: calc(116px * 0.5) !important;
+  }
+  .G1-card > .G1-art .G1-deckart.ability[data-res=medium] {
+    width: 525px !important;
+    height: 116px !important;
+  }
+  .G1-card > .G1-art .G1-deckart.ability[data-res=medium] > img {
+    border-radius: 8px;
+    width: 525px !important;
+    height: 116px !important;
+  }
+  .G1-card > .G1-art .G1-artist {
+    grid-area: G1-artist;
+  }
+  .G1-card > .G1-art .G1-artist span:before {
+    content: "Art: ";
+  }
+  .G1-card.rounded .G1-head {
+    border-radius: 1em 1em 0 0;
+  }
+  .G1-card.rounded .G1-body {
+    border-radius: 0 0 1em 1em;
+  }
+  .G1-card.tippy {
+    font-size: 0.8rem !important;
+    grid-template-columns: 249px;
+    grid-template-areas: "G1-art" "G1-info";
+    grid-gap: 5px;
+  }
+  .G1-card.tippy > .G1-art {
+    grid-gap: 0px;
+  }
+  .G1-card.tippy .G1-head, .G1-card.tippy .G1-body {
+    padding: 0.6rem;
+  }
+  
+  .G1-card[data-faction=neutral] .G1-head {
+    background-color: #302113;
+  }
+  
+  .G1-card[data-faction=monster] .G1-head {
+    background-color: #4e120a;
+  }
+  
+  .G1-card[data-faction=nilfgaard] .G1-head {
+    background-color: #222222;
+  }
+  
+  .G1-card[data-faction=northern_realms] .G1-head {
+    background-color: #113a68;
+  }
+  
+  .G1-card[data-faction=scoiatael] .G1-head {
+    background-color: #323a1e;
+  }
+  
+  .G1-card[data-faction=skellige] .G1-head {
+    background-color: #33155d;
+  }
+  
+  .G1-card[data-faction=syndicate] .G1-head {
+    background-color: #75390d;
+  }
+  
+  .G1-card[data-faction2=neutral] .G1-head {
+    background-image: linear-gradient(45grad, #75390d 50%, #302113 50%);
+  }
+  
+  .G1-card[data-faction2=monster] .G1-head {
+    background-image: linear-gradient(45grad, #75390d 50%, #4e120a 50%);
+  }
+  
+  .G1-card[data-faction2=nilfgaard] .G1-head {
+    background-image: linear-gradient(45grad, #75390d 50%, #222222 50%);
+  }
+  
+  .G1-card[data-faction2=northern_realms] .G1-head {
+    background-image: linear-gradient(45grad, #75390d 50%, #113a68 50%);
+  }
+  
+  .G1-card[data-faction2=scoiatael] .G1-head {
+    background-image: linear-gradient(45grad, #75390d 50%, #323a1e 50%);
+  }
+  
+  .G1-card[data-faction2=skellige] .G1-head {
+    background-image: linear-gradient(45grad, #75390d 50%, #33155d 50%);
+  }
+  
+  .G1-card[data-faction2=syndicate] .G1-head {
+    background-image: linear-gradient(45grad, #75390d 50%, #75390d 50%);
+  } */

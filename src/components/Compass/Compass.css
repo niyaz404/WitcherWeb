@@ -1,0 +1,9 @@
+.compass-container{
+    position: fixed;
+    top:-50vh;
+    left: -50vh;
+    height: 100vh;
+    width: 100vh;
+    transform: rotate(var(--scrollTop)deg);
+    z-index: -2;
+  }
