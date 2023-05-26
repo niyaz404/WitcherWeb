@@ -1,7 +1,7 @@
 {
   "name": "react_landing",
   "version": "0.1.0",
-  "homepage": "https://github.com/niyaz404/WitcherWeb",
+  "homepage": "https://niyaz404.github.io/WitcherWeb",
   "private": true,
   "dependencies": {
     "@testing-library/react": "^13.4.0",
