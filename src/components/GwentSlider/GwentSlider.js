@@ -108,7 +108,7 @@ function GwentSlider(props) {
             <div className="card-container" >
                 {
                     cards.map(card=>{return(
-                        <GwentCard key={card.id} id={card.id} state={card.state} index={card.index} onClick={(event)=>onClick(event)}></GwentCard>
+                        <GwentCard key={card.id} id={card.id} cardId={card.id} state={card.state} index={card.index} onClick={(event)=>onClick(event)}></GwentCard>
                     )})
                 }
             </div>

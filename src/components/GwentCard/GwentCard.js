@@ -11,8 +11,8 @@ function GwentCard(props) {
         getCard();        
     },[])
     async function getCard() {
-        return fetch(`https://api.gwent.one/?key=data&id=${props.id}&response=html&html=href.keywords`).then(res => res.text()).then(res => {
-            setData(res);
+        return fetch(`https://api.gwent.one/?key=data&id=${props.cardId}&response=html&html=href.keywords`).then(res => res.text()).then(res => {  
+        setData(res);
         })
     }
     return (
