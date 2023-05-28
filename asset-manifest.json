@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/WitcherWeb/static/css/main.1f9795f1.css",
-    "main.js": "/WitcherWeb/static/js/main.5190e015.js",
+    "main.css": "/WitcherWeb/static/css/main.fc5c6b72.css",
+    "main.js": "/WitcherWeb/static/js/main.e958ce56.js",
     "static/media/back2.png": "/WitcherWeb/static/media/back2.49e5b662c86a47b3d990.png",
     "static/media/yen.jpg": "/WitcherWeb/static/media/yen.d2bc4966606ba8596920.jpg",
     "static/media/nit.jpg": "/WitcherWeb/static/media/nit.bf769d813a0035b5e4ed.jpg",
@@ -17,7 +17,6 @@
     "static/media/card.jpg": "/WitcherWeb/static/media/card.d3ac0ebf8da2f3759b9d.jpg",
     "static/media/frac.jpg": "/WitcherWeb/static/media/frac.c6e2aaba130905cacac2.jpg",
     "static/media/sparks1.png": "/WitcherWeb/static/media/sparks1.9ac32613458941e8d088.png",
-    "static/media/cards3.jpg": "/WitcherWeb/static/media/cards3.d277f242113492e58a6f.jpg",
     "static/media/nilf2.jpeg": "/WitcherWeb/static/media/nilf2.d704c879bf64a7b41968.jpeg",
     "static/media/north.jpeg": "/WitcherWeb/static/media/north.55e6e6240ca5ed23c20d.jpeg",
     "static/media/elf2.jpeg": "/WitcherWeb/static/media/elf2.531d87d76df892318ac9.jpeg",
@@ -28,7 +27,6 @@
     "static/media/geraciri.jpg": "/WitcherWeb/static/media/geraciri.79ca13727b89c26263d5.jpg",
     "static/media/compass.svg": "/WitcherWeb/static/media/compass.0c9152d4226debe8f24a33e37a757d1d.svg",
     "static/media/amaz4.jpg": "/WitcherWeb/static/media/amaz4.7e009b60eb3b927a7fec.jpg",
-    "static/media/141.jpg": "/WitcherWeb/static/media/141.0b72391cc0991168b475.jpg",
     "static/media/Montserrat-BoldItalic.ttf": "/WitcherWeb/static/media/Montserrat-BoldItalic.360c8432a3f6bb697796.ttf",
     "static/media/Montserrat-Regular.ttf": "/WitcherWeb/static/media/Montserrat-Regular.ceb11275ab638627a643.ttf",
     "static/media/amaz3.jpg": "/WitcherWeb/static/media/amaz3.b4d925d7b1c0213a15e4.jpg",
@@ -37,17 +35,29 @@
     "static/media/gwent_extrabold.ttf": "/WitcherWeb/static/media/gwent_extrabold.3e38464e5746c51d674a.ttf",
     "static/media/amaz2.jpg": "/WitcherWeb/static/media/amaz2.c3cc5a78d9c519830495.jpg",
     "static/media/gunter.jpg": "/WitcherWeb/static/media/gunter.4bbfa6a997446ff04863.jpg",
-    "static/media/cards2.jpg": "/WitcherWeb/static/media/cards2.62ada89d87c88a5fada2.jpg",
-    "static/media/end.jpg": "/WitcherWeb/static/media/end.2cb3c16f937e9b6ede7a.jpg",
+    "static/media/border_gold.png": "/WitcherWeb/static/media/border_gold.9adf6b7ce8db86b8037a.png",
     "static/media/griph.png": "/WitcherWeb/static/media/griph.20581998d825754afa86.png",
     "static/media/Thewitcher-jnOj.ttf": "/WitcherWeb/static/media/Thewitcher-jnOj.d40f3b84832ebc8a9a50.ttf",
+    "static/media/default_skellige.png": "/WitcherWeb/static/media/default_skellige.c9b46ecda3ca1c161565.png",
+    "static/media/default_scoiatael.png": "/WitcherWeb/static/media/default_scoiatael.69ea86285231c9a79800.png",
+    "static/media/default_northern-realms.png": "/WitcherWeb/static/media/default_northern-realms.108911c518de9831c586.png",
+    "static/media/default_monster.png": "/WitcherWeb/static/media/default_monster.cb9ff47bba7d4a0189dc.png",
+    "static/media/default_neutral.png": "/WitcherWeb/static/media/default_neutral.ed45fa0e432a585de0f5.png",
+    "static/media/default_syndicate.png": "/WitcherWeb/static/media/default_syndicate.4bae2c0b02187a255432.png",
+    "static/media/default_nilfgaard.png": "/WitcherWeb/static/media/default_nilfgaard.150bc2a8558f8d94ffa6.png",
+    "static/media/provision_nilfgaard.png": "/WitcherWeb/static/media/provision_nilfgaard.d911f80cc20d92d8caff.png",
+    "static/media/provision_northern-realms.png": "/WitcherWeb/static/media/provision_northern-realms.d1e39431bd55df305491.png",
+    "static/media/provision_scoiatael.png": "/WitcherWeb/static/media/provision_scoiatael.8364971497e850d5726f.png",
+    "static/media/provision_skellige.png": "/WitcherWeb/static/media/provision_skellige.d00b5f0b9f74a66df653.png",
+    "static/media/provision_neutral.png": "/WitcherWeb/static/media/provision_neutral.aa4324c1944374326441.png",
+    "static/media/provision_syndicate.png": "/WitcherWeb/static/media/provision_syndicate.7324cc89d7e49bb2b2ee.png",
     "static/media/G1card.css.map": "/WitcherWeb/static/media/G1card.css.5af941fac09840b3c770.map",
     "index.html": "/WitcherWeb/index.html",
-    "main.1f9795f1.css.map": "/WitcherWeb/static/css/main.1f9795f1.css.map",
-    "main.5190e015.js.map": "/WitcherWeb/static/js/main.5190e015.js.map"
+    "main.fc5c6b72.css.map": "/WitcherWeb/static/css/main.fc5c6b72.css.map",
+    "main.e958ce56.js.map": "/WitcherWeb/static/js/main.e958ce56.js.map"
   },
   "entrypoints": [
-    "static/css/main.1f9795f1.css",
-    "static/js/main.5190e015.js"
+    "static/css/main.fc5c6b72.css",
+    "static/js/main.e958ce56.js"
   ]
 }
