@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/WitcherWeb/static/css/main.fc5c6b72.css",
-    "main.js": "/WitcherWeb/static/js/main.ef6ad67e.js",
+    "main.css": "/WitcherWeb/static/css/main.8bba51a7.css",
+    "main.js": "/WitcherWeb/static/js/main.b6910d9f.js",
     "static/media/back2.png": "/WitcherWeb/static/media/back2.49e5b662c86a47b3d990.png",
     "static/media/yen.jpg": "/WitcherWeb/static/media/yen.d2bc4966606ba8596920.jpg",
     "static/media/nit.jpg": "/WitcherWeb/static/media/nit.bf769d813a0035b5e4ed.jpg",
@@ -49,15 +49,16 @@
     "static/media/provision_northern-realms.png": "/WitcherWeb/static/media/provision_northern-realms.d1e39431bd55df305491.png",
     "static/media/provision_scoiatael.png": "/WitcherWeb/static/media/provision_scoiatael.8364971497e850d5726f.png",
     "static/media/provision_skellige.png": "/WitcherWeb/static/media/provision_skellige.d00b5f0b9f74a66df653.png",
+    "static/media/provision_monster.png": "/WitcherWeb/static/media/provision_monster.995617380fc69fd4b27b.png",
     "static/media/provision_neutral.png": "/WitcherWeb/static/media/provision_neutral.aa4324c1944374326441.png",
     "static/media/provision_syndicate.png": "/WitcherWeb/static/media/provision_syndicate.7324cc89d7e49bb2b2ee.png",
     "static/media/G1card.css.map": "/WitcherWeb/static/media/G1card.css.5af941fac09840b3c770.map",
     "index.html": "/WitcherWeb/index.html",
-    "main.fc5c6b72.css.map": "/WitcherWeb/static/css/main.fc5c6b72.css.map",
-    "main.ef6ad67e.js.map": "/WitcherWeb/static/js/main.ef6ad67e.js.map"
+    "main.8bba51a7.css.map": "/WitcherWeb/static/css/main.8bba51a7.css.map",
+    "main.b6910d9f.js.map": "/WitcherWeb/static/js/main.b6910d9f.js.map"
   },
   "entrypoints": [
-    "static/css/main.fc5c6b72.css",
-    "static/js/main.ef6ad67e.js"
+    "static/css/main.8bba51a7.css",
+    "static/js/main.b6910d9f.js"
   ]
 }
