@@ -3,11 +3,6 @@ import { useRef, useEffect, useState } from 'react';
 import './Modal.css'
 
 function Modal(props) {
-
-    useEffect(()=>{
-        console.log(props);
-    })
-
     return (
         <div className={props.isActive?"modal active":"modal"} onClick={()=>props.setActive()}>
             <div className={props.isActive?"modal-content active":"modal-content"} onClick={e=>e.stopPropagation()} 

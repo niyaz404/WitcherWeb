@@ -319,6 +319,9 @@ video {
 .video-wrap[data-faction=skellige] .card_provision {
     background-image: url(/src/assets/img/CardBack/provision-bg/provision_skellige.png)
 }
+.video-wrap[data-faction=monster] .card_provision {
+    background-image: url(/src/assets/img/CardBack/provision-bg/provision_monster.png)
+}
 .video-wrap[data-faction=syndicate] .card_provision {
     background-image: url(/src/assets/img/CardBack/provision-bg/provision_syndicate.png)
 }
