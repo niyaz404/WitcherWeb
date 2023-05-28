@@ -2,123 +2,120 @@ import React from 'react';
 import { useRef, useEffect, useState } from 'react';
 import './GwentSlider.css'
 import GwentCard from '../GwentCard/GwentCard'
+import GwentCardInfo from '../GwentCardInfo/GwentCardInfo'
 import Modal from "../Modal/Modal"
-import left from '../../assets/img/gwentSlider/left-arrow-icon.png'
-import right from '../../assets/img/gwentSlider/right-arrow-icon.png'
-let api;
 
-let cards=[];
 let leftCards=[];
-let rightCards=[];
-let selectedCards=[];
-let cardDataset = [];
-const isLeft = -1;
-const isSelected = 0;
-const isRight = 1;
-let modalContent;
-let videoSrc;
+let rightCards=[]
+let currentCard;
+let cardInfo;
 
 function GwentSlider(props) {
+    const [cards, setCards] = useState([])
+    const [current,setCurrent] = useState(-1);
+    const [modalActive,setModalActive] = useState(false);
+    const [selectedCard,setSelectedCard] = useState();
+    const onClick=(event)=> { console.log(event.currentTarget); if(event.currentTarget.className.indexOf("selected") >= 0) openModal(event.currentTarget.id)};
 
-    useEffect(() => {
-        cards = Array.from(props.container.current.children);
-        leftCards = cards.filter((item) => { return item.className.indexOf("left") >= 0 });
-        rightCards = cards.filter((item) => { return item.className.indexOf("right") >= 0 });
-        selectedCards = cards.filter((item) => { return item.className.indexOf("selected") >= 0 });
-        SetIndex();
-    })
 
-    function Left(e) {
-        if (selectedCards.length > 0) {
-            selectedCards[0].classList.remove('selected');
-            selectedCards[0].classList.add('left');
-            leftCards.push(selectedCards.pop());
-            leftCards[leftCards.length - 1].style.cssText += `--cardIndex:${leftCards.length - 1}`;
-        }
-        if (rightCards.length > 0) {
-            rightCards[rightCards.length - 1].classList.remove('right');
-            rightCards[rightCards.length - 1].classList.add('selected');
-            selectedCards.push(rightCards.pop());
-            selectedCards[0].style.cssText += `--cardIndex:${0}`;
-        }
+    const setCurrentState = function(newCurrent){
+        if((newCurrent<current && newCurrent < -1) || (newCurrent>current && newCurrent>cards.length))
+            return;
+        setCurrent(newCurrent);
     }
-    function Right(e) {
-        if (selectedCards.length > 0) {
-            selectedCards[0].classList.remove('selected');
-            selectedCards[0].classList.add('right');
-            rightCards.push(selectedCards.pop());
-            rightCards[rightCards.length - 1].style.cssText += `--cardIndex:${rightCards.length - 1}`;
+    const setCardsState = function(rightDeck,_currentCard,leftDeck){
+        if(rightDeck.length + leftDeck.length !== cards.length && _currentCard === undefined){
+            setCards([...cards]);
         }
-        if (leftCards.length > 0) {
-            leftCards[leftCards.length - 1].classList.remove('left');
-            leftCards[leftCards.length - 1].classList.add('selected');
-            selectedCards.push(leftCards.pop());
-            selectedCards[0].style.cssText += `--cardIndex:${0}`;
-        }
+        else if(_currentCard === null || _currentCard === undefined){
+            setCards([...rightDeck,...leftDeck]);
+        } else
+        setCards([...rightDeck,_currentCard,...leftDeck]);
     }
-    function SetIndex() {
-        for (let i = 0; i < leftCards.length; i++) {
-            leftCards[i].style.cssText += `--cardIndex:${i}`;
+
+    useEffect(()=>{
+        let index = props.cardIds.length;
+        let newCards = props.cardIds.map(id=>{return {id:id,state:"left",index: index--}});
+        setCards([...newCards]);
+
+    },[props.cardIds]);
+
+    function SwipeRight(){  
+        let newCurrent = current + 1;      
+        let filteredcards =cards.filter((item, idx)=>(idx!==newCurrent));
+        let index = 0;
+        rightCards=filteredcards.slice(0,newCurrent).map(el => ({...el, state: 'right', index:index++}));
+        index = cards.length - newCurrent;
+        leftCards=filteredcards.slice(newCurrent).map(el => ({...el, state: 'left',index:index--}));
+        if(newCurrent<cards.length){
+            currentCard={
+                ...cards[newCurrent],
+                state:'selected'
+            }
         }
-        for (let i = 0; i < rightCards.length; i++) {
-            rightCards[i].style.cssText += `--cardIndex:${rightCards.length - 1 -i}`;
-        }
-        rightCards=rightCards.reverse();
+        else currentCard=null;        
+        setCurrentState(newCurrent);
+        setCardsState(rightCards,currentCard,leftCards);
+    }
+    function SwipeLeft(){
+        let newCurrent = current - 1;
+        let index = 0;        
+        let filteredcards =cards.filter((item, idx)=>(idx!==newCurrent));
+        rightCards=filteredcards.filter( (item,idx)=> idx<newCurrent).map(el => ({...el, state: 'right',index:index++}));
+        index = cards.length - newCurrent;
+        leftCards=filteredcards.filter( (item,idx)=> idx>=newCurrent).map((el) => ({...el, state: 'left',index:index--}));
+        if(newCurrent>=0){
+            currentCard = cards[newCurrent];
+            currentCard={
+                ...currentCard,
+                state:'selected'
+            }
+        }else currentCard=null;
+        setCurrentState(newCurrent);
+        setCardsState(rightCards,currentCard,leftCards);
     }
     function openModal(id){
         var xhr = new XMLHttpRequest();
         xhr.open('GET', `https://api.gwent.one/?key=data&language=ru&id=${id}&response=html&html=href.keywords.linkname`,false);        
         xhr.send();
-        modalContent=xhr.responseText;
+        cardInfo=xhr.responseText;
 
         xhr.open('GET', `https://api.gwent.one/?key=data&language=ru&id=${id}&response=json&html=href.keywords.linkname`);
         xhr.responseType='json';
         xhr.setRequestHeader("Content-Type","application/json;charset=UTF-8"); 
         xhr.onload=async ()=> {
             let response = xhr.response.response[0].attributes;
-            setSelectedFaction(response.faction.toLowerCase());
-            setSelectedPower(response.power);
-            setSelectedProvision(response.provision);
+            let card={
+                id:id,
+                faction:response.faction.toLowerCase(),                
+                rarity:response.rarity.toLowerCase(),
+                power:response.power,
+                provision:response.provision,
+                description:cardInfo
+            }
+            setSelectedCard(<GwentCardInfo card={card} props={selectedCard}></GwentCardInfo>);
           }  
         xhr.send();
-        setSelectedId(id);
-        //modalContent+=`<div class="video-wrap" data-provision=${selectedProvision} data-faction=${selectedFaction} data-power=${selectedPower}><video src="https://gwent.one/video/card/premium/${id}.webm" type="video/webm" autoPlay="autoplay"></video><div class="card-frame"></div><div class="card_provision"><div class="card-prov"></div></div><div class="card-power-back"><div class="card-power"></div></div></div>`;
-        videoSrc=`https://gwent.one/video/card/premium/${id}.webm`;
+        
         setModalActive(true);
     }
 
-    function closeModal(){
-        setModalActive(false);
-        videoSrc = "";
-    }
-
-    const [modalActive,setModalActive] = useState(false);
-    const [selectedId,setSelectedId] = useState();
-    const [selectedFaction,setSelectedFaction] = useState();
-    const [selectedPower,setSelectedPower] = useState();
-    const [selectedProvision,setSelectedProvision] = useState();
-    const onClick=(event)=> { if(event.currentTarget.className.indexOf("selected") >= 0) openModal(event.currentTarget.id)};
-
     return (
         <div className="gwent-slider">
-            <div className="arrow left-arrow" onClick={e => Left(e)}>
-                {/* <img src={left} /> */}
+            <div className="arrow left-arrow" onClick={e => SwipeLeft(e)}>
                 <span className="material-icons-outlined expand">expand_more</span>
                 </div>
-            <div className="card-container" ref={props.container}>
+            <div className="card-container" >
                 {
-                    props.cardIds.map(id=>{return(
-                        <GwentCard key={id} cardId={id} id={id} state='left' onClick={(event)=>onClick(event)}></GwentCard>
+                    cards.map(card=>{return(
+                        <GwentCard key={card.id} id={card.id} state={card.state} index={card.index} onClick={(event)=>onClick(event)}></GwentCard>
                     )})
                 }
             </div>
-            <div className="arrow right-arrow" onClick={e => Right(e)}>
-                {/* <img src={right} /> */}
+            <div className="arrow right-arrow" onClick={e => SwipeRight(e)}>
                 <span className="material-icons-outlined expand">expand_more</span>
             </div>
-            <Modal isActive={modalActive} faction={selectedFaction} provision={selectedProvision} power={selectedPower} videoSrc={videoSrc} setActive={closeModal} content={modalContent} cardId={selectedId}>
-                {modalContent}
-            </Modal>
+            <Modal isActive={modalActive} setActive={setModalActive} content={selectedCard}></Modal>
         </div>
     );
 }

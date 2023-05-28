@@ -1,0 +1,340 @@
+.card-info{
+    width:100%;
+    height: 100%;
+    display: flex;
+}
+
+.card-description{
+    width:calc(var(--index) * 25);
+    padding:0 calc(var(--index) * 1);
+}
+
+
+.video-wrap{
+    border-radius: 10px;
+    margin-top:1.5vw;
+    position: relative;
+    height: calc(var(--index) * 19);
+    width: calc(var(--index) * 13.15);
+    top:0;
+    left:0;
+}
+.card-frame{
+    border-radius: 10px;
+    position: absolute;
+    background-image: url(/src/assets/img/CardBack/frame/border_gold.png);
+    height: 100%;
+    width: 100%;
+    top:0;
+    left:0;
+    background-size: cover;
+    background-position: center;
+}
+
+video {
+    border-radius: 10px;
+    position: absolute;
+    height: calc(var(--index) * 19);
+    top:0;
+    left:0;
+}
+
+.card-rarity{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top:0;
+    left:0;
+    background-size: cover;
+    background-position: center;
+}
+
+.card_provision{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top:0;
+    left:0;
+    background-size: cover;
+    background-position: center;
+}
+.card-prov{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top:0;
+    left:0;
+    background-size: cover;
+    background-position: center;
+}
+.card-power-back{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top:0;
+    left:0;
+    background-size: cover;
+    background-position: center;
+}
+.card-power{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top:0;
+    left:0;
+    background-size: cover;
+    background-position: center;
+}
+
+.card-description> .G1-card{
+    height: 100%;
+    width: 100%;
+    font-family: 'Gwent'!important;
+}
+
+.card-description .G1-art{
+    margin:1.5vw;
+    display: none;
+}
+
+.card-description .G1-card>.G1-info{
+    margin:1.5vw;
+    text-align: start;
+    display: block;
+    background-color: #a18c6c;
+
+}
+
+.card-description .G1-head{
+    padding: 10px;
+    border-radius: 0 2vw 0 0;
+    color: white;
+}
+
+.card-description .G1-body{
+    padding: 10px;
+}
+
+.card-description .G1-name{
+    font-size: 3vw;
+}
+.G1-card > .G1-info span.keyword {
+    color: #600101;
+    font-weight: 800;
+}
+
+.G1-name>a{
+    text-decoration: none;
+    color: white;
+}
+
+.G1-card[data-faction=neutral] .G1-head {
+    background-color: #302113;
+  }
+  
+  .G1-card[data-faction=monster] .G1-head {
+    background-color: #4e120a;
+  }
+  
+  .G1-card[data-faction=nilfgaard] .G1-head {
+    background-color: #222222;
+  }
+  
+  .G1-card[data-faction=northern_realms] .G1-head {
+    background-color: #113a68;
+  }
+  
+  .G1-card[data-faction=scoiatael] .G1-head {
+    background-color: #323a1e;
+  }
+  
+  .G1-card[data-faction=skellige] .G1-head {
+    background-color: #33155d;
+  }
+  
+  .G1-card[data-faction=syndicate] .G1-head {
+    background-color: #75390d;
+  }
+  
+  .G1-card[data-faction2=neutral] .G1-head {
+    background-image: linear-gradient(45grad, #75390d 50%, #302113 50%);
+  }
+  
+  .G1-card[data-faction2=monster] .G1-head {
+    background-image: linear-gradient(45grad, #75390d 50%, #4e120a 50%);
+  }
+  
+  .G1-card[data-faction2=nilfgaard] .G1-head {
+    background-image: linear-gradient(45grad, #75390d 50%, #222222 50%);
+  }
+  
+  .G1-card[data-faction2=northern_realms] .G1-head {
+    background-image: linear-gradient(45grad, #75390d 50%, #113a68 50%);
+  }
+  
+  .G1-card[data-faction2=scoiatael] .G1-head {
+    background-image: linear-gradient(45grad, #75390d 50%, #323a1e 50%);
+  }
+  
+  .G1-card[data-faction2=skellige] .G1-head {
+    background-image: linear-gradient(45grad, #75390d 50%, #33155d 50%);
+  }
+  
+  .G1-card[data-faction2=syndicate] .G1-head {
+    background-image: linear-gradient(45grad, #75390d 50%, #75390d 50%);
+  }
+
+
+  .video-wrap[data-power="0"] .card-power {
+    background-image: url(/src/assets/img/CardBack/power/power_00.png)
+}
+.video-wrap[data-power="1"] .card-power {
+    background-image: url(/src/assets/img/CardBack/power/power_01.png)
+}
+.video-wrap[data-power="2"] .card-power {
+    background-image: url(/src/assets/img/CardBack/power/power_02.png)
+}
+.video-wrap[data-power="3"] .card-power {
+    background-image: url(/src/assets/img/CardBack/power/power_03.png)
+}
+.video-wrap[data-power="4"] .card-power {
+    background-image: url(/src/assets/img/CardBack/power/power_04.png)
+}
+.video-wrap[data-power="5"] .card-power {
+    background-image: url(/src/assets/img/CardBack/power/power_05.png)
+}
+.video-wrap[data-power="6"] .card-power {
+    background-image: url(/src/assets/img/CardBack/power/power_06.png)
+}
+.video-wrap[data-power="7"] .card-power {
+    background-image: url(/src/assets/img/CardBack/power/power_07.png)
+}
+.video-wrap[data-power="8"] .card-power {
+    background-image: url(/src/assets/img/CardBack/power/power_08.png)
+}
+.video-wrap[data-power="9"] .card-power {
+    background-image: url(/src/assets/img/CardBack/power/power_09.png)
+}
+.video-wrap[data-power="10"] .card-power {
+    background-image: url(/src/assets/img/CardBack/power/power_10.png)
+}
+.video-wrap[data-power="11"] .card-power {
+    background-image: url(/src/assets/img/CardBack/power/power_11.png)
+}
+.video-wrap[data-power="12"] .card-power {
+    background-image: url(/src/assets/img/CardBack/power/power_12.png)
+}
+.video-wrap[data-power="13"] .card-power {
+    background-image: url(/src/assets/img/CardBack/power/power_13.png)
+}
+.video-wrap[data-power="14"] .card-power {
+    background-image: url(/src/assets/img/CardBack/power/power_14.png)
+}
+.video-wrap[data-power="15"] .card-power {
+    background-image: url(/src/assets/img/CardBack/power/power_15.png)
+}
+
+.video-wrap[data-faction=neutral] .card-power-back {
+    background-image: url(/src/assets/img/CardBack/power-bg/default_neutral.png)
+}
+.video-wrap[data-faction=monster] .card-power-back {
+    background-image: url(/src/assets/img/CardBack/power-bg/default_monster.png)
+}
+.video-wrap[data-faction=nilfgaard] .card-power-back {
+    background-image: url(/src/assets/img/CardBack/power-bg/default_nilfgaard.png)
+}
+.video-wrap[data-faction=northern_realms] .card-power-back {
+    background-image: url(/src/assets/img/CardBack/power-bg/default_northern-realms.png)
+}
+.video-wrap[data-faction=scoiatael] .card-power-back {
+    background-image: url(/src/assets/img/CardBack/power-bg/default_scoiatael.png)
+}
+.video-wrap[data-faction=skellige] .card-power-back {
+    background-image: url(/src/assets/img/CardBack/power-bg/default_skellige.png)
+}
+.video-wrap[data-faction=syndicate] .card-power-back {
+    background-image: url(/src/assets/img/CardBack/power-bg/default_syndicate.png)
+}
+
+
+
+.video-wrap[data-provision="1"] .card-prov {
+    background-image: url(/src/assets/img/CardBack/provision/provision_01.png)
+}
+.video-wrap[data-provision="2"] .card-prov {
+    background-image: url(/src/assets/img/CardBack/provision/provision_02.png)
+}
+.video-wrap[data-provision="3"] .card-prov {
+    background-image: url(/src/assets/img/CardBack/provision/provision_03.png)
+}
+.video-wrap[data-provision="4"] .card-prov {
+    background-image: url(/src/assets/img/CardBack/provision/provision_04.png)
+}
+.video-wrap[data-provision="5"] .card-prov {
+    background-image: url(/src/assets/img/CardBack/provision/provision_05.png)
+}
+.video-wrap[data-provision="6"] .card-prov {
+    background-image: url(/src/assets/img/CardBack/provision/provision_06.png)
+}
+.video-wrap[data-provision="7"] .card-prov {
+    background-image: url(/src/assets/img/CardBack/provision/provision_07.png)
+}
+.video-wrap[data-provision="8"] .card-prov {
+    background-image: url(/src/assets/img/CardBack/provision/provision_08.png)
+}
+.video-wrap[data-provision="9"] .card-prov {
+    background-image: url(/src/assets/img/CardBack/provision/provision_09.png)
+}
+.video-wrap[data-provision="10"] .card-prov {
+    background-image: url(/src/assets/img/CardBack/provision/provision_10.png)
+}
+.video-wrap[data-provision="11"] .card-prov {
+    background-image: url(/src/assets/img/CardBack/provision/provision_11.png)
+}
+.video-wrap[data-provision="12"] .card-prov {
+    background-image: url(/src/assets/img/CardBack/provision/provision_12.png)
+}
+.video-wrap[data-provision="13"] .card-prov {
+    background-image: url(/src/assets/img/CardBack/provision/provision_13.png)
+}
+.video-wrap[data-provision="14"] .card-prov {
+    background-image: url(/src/assets/img/CardBack/provision/provision_14.png)
+}
+.video-wrap[data-provision="15"] .card-prov {
+    background-image: url(/src/assets/img/CardBack/provision/provision_15.png)
+}
+
+.video-wrap[data-faction=nilfgaard] .card_provision {
+    background-image: url(/src/assets/img/CardBack/provision-bg/provision_nilfgaard.png)
+}
+.video-wrap[data-faction=neutral] .card_provision {
+    background-image: url(/src/assets/img/CardBack/provision-bg/provision_neutral.png)
+}
+.video-wrap[data-faction=northern_realms] .card_provision {
+    background-image: url(/src/assets/img/CardBack/provision-bg/provision_northern-realms.png)
+}
+.video-wrap[data-faction=scoiatael] .card_provision {
+    background-image: url(/src/assets/img/CardBack/provision-bg/provision_scoiatael.png)
+}
+.video-wrap[data-faction=skellige] .card_provision {
+    background-image: url(/src/assets/img/CardBack/provision-bg/provision_skellige.png)
+}
+.video-wrap[data-faction=syndicate] .card_provision {
+    background-image: url(/src/assets/img/CardBack/provision-bg/provision_syndicate.png)
+}
+
+.video-wrap[data-rarity=common] .card-rarity {
+    background-image: url(/src/assets/img/CardBack/rarity/rarity_common.png)
+}
+
+.video-wrap[data-rarity=rare] .card-rarity {
+    background-image: url(/src/assets/img/CardBack/rarity/rarity_rare.png)
+}
+
+.video-wrap[data-rarity=epic] .card-rarity {
+    background-image: url(/src/assets/img/CardBack/rarity/rarity_epic.png)
+}
+
+.video-wrap[data-rarity=legendary] .card-rarity {
+    background-image: url(/src/assets/img/CardBack/rarity/rarity_legendary.png)
+}

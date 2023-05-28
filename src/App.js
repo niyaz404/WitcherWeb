@@ -117,35 +117,3 @@ return(
 }
 
 export default App;
-
-
-//gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
-
-// const main = useRef();
-//   const smoother = useRef();
-
-//   const scrollTo = () => {
-//     smoother.current.scrollTo('.box-c', true, 'center center');
-//   };
-
-//   useLayoutEffect(() => {
-//     const ctx = gsap.context(() => {
-//       // create the smooth scroller FIRST!
-//       smoother.current = ScrollSmoother.create({
-//         smooth: 4, // seconds it takes to "catch up" to native scroll position
-//         effects: true, // look for data-speed and data-lag attributes on elements and animate accordingly
-//       });
-//       ScrollTrigger.create({
-//         trigger: '.second-page',
-//         pin: true,
-//         start: 'center center',
-//         end: '+=300',
-//         markers: true,
-//       });
-//     }, main);
-//     return () => ctx.revert();
-//   }, []);
-
-// function getCssProperty(elem, property){
-//   return window.getComputedStyle(elem,null).getPropertyValue(property);
-// }

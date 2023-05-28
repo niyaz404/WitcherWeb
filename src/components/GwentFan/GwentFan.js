@@ -13,8 +13,8 @@ function GwentFan(props) {
     return (
         <div className="deck">
             {
-                props.cardIds.map(id=>{return(
-                    <GwentCard key={id} cardId={id} id={'card'+index++} state={''}></GwentCard>
+                props.cardIds.map(id=>{;return(
+                    <GwentCard key={id} cardId={id} id={'card'+index++}></GwentCard>
                 )})
             }
         </div>
